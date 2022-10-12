@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css.css">
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function MyApp() {
+            const name = "react";
+            return (
+                <div className="link-css">
+                    {name}
+                    <br />{/* 반드시 닫는 태그 필요 */}
+                    <input type="text" ></input> {/* 자바스크립트 주석사용*/}
+                    <input 
+                        type="text" // 주석 사용가능
+                        // 태그가 여러줄로 나눠있을경우 //로 주석 사용가능
+                        />
+                        <br />
+                        
+                </div>
+            );
+        }
+        
+        const container = document.getElementById('root')
+        ReactDOM.render(<MyApp />,container);
+    </script>
+</body>
+</html>
