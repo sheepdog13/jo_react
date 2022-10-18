@@ -4,6 +4,7 @@ import EventChangeFuncComp from './components/EventChangeFuncComp';
 import EventRefComp from './components/EventRefComp';
 import EventRefCompTest from './components/EventRefCompTest';
 import EventTest from './components/EventTest';
+import StoryBox from './components/StoryBox';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <EventRefComp />
     <EventRefCompTest />
     <EventTest />
+    <StoryBox />
     </div>
   );
 }
