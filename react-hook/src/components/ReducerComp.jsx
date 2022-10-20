@@ -7,14 +7,16 @@ import ReducerCountComp from "./RuducerCountComp";
 
 function reducer(state, action) {
     switch(action.type) {
+        // state안에 여러개의 값이 있을때, 이전 값을 유지해주어야한다
+        // 이전 값을 유지하기위한 ...state를 추가
         case 'increment':
-            return {count : state.count+1};
+            return {...state, count : state.count+1};
         case 'decrement':
-            return {count : state.count-1};
+            return {...state, count : state.count-1};
         case 'zero':
-            return {count : 0};
+            return {...state, count : 0};
         case 'changeInput':
-            return {input : action.payload};
+            return {...state, input : action.payload};
     }
 }
 

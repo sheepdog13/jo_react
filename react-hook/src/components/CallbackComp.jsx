@@ -14,6 +14,8 @@ const CallbackComp = () => {
     // : 함수이름을 통해 여러번 꺼내 쓸수있다
 
     const changeName = useCallback(()=>{setName("홍길동")}, [])
+
+    // []의 인자값이 바뀔때, 안의 골백함수가 새로 만들어져서 사용될수있다
     const onchange = useCallback((e)=>{
         console.log(count)
         setName(e.target.value)
